@@ -1,15 +1,11 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 .question {
     padding: 6px 12px;
     border-radius: 10px;
     margin-top: 6px;
 }
 
-.gray {
-    background-color: rgba(0,0,0,.2);
+.question-bg {
+    background-color: rgba(94, 157, 208, 0.2);
 }
 
 .option,
@@ -19,6 +15,13 @@ button {
     color: #000;
     box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
     background-color: #fff;
+}
+
+button {
+    border: none;
+    margin-top: 6px;
+    background-color: rgb(0, 57, 148);
+    color: white;
 }
 
 .selected {
@@ -41,4 +44,12 @@ button {
 
 .incorrect-answer {
     background-color:rgba(205, 0, 0, 0.3);
+}
+
+@media screen and (min-width : 676px) {
+    .question-section {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 6px;
+    }
 }

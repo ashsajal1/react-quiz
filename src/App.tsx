@@ -110,9 +110,9 @@ export default function App() {
 
   return (
     <>
-      <section>
+      <section className="question-section">
         {questions.map((question, index) => (
-          <div className="question gray" key={index}>
+          <div className="question question-bg" key={index}>
             <h1>{question.question}</h1>
             {question.options.map((option, index) => (
               <p key={index}
