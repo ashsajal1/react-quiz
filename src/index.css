@@ -1,0 +1,44 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.question {
+    padding: 6px 12px;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+.gray {
+    background-color: rgba(0,0,0,.2);
+}
+
+.option,
+button {
+    border-radius: 10px;
+    padding: 6px;
+    color: #000;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+}
+
+.correct {
+    background-color: green;
+}
+
+.wrong {
+    background-color: red;
+}
+
+.correct-answer {
+    background-color: rgba(14, 188, 66, 0.3);
+}
+
+
+.incorrect-answer {
+    background-color:rgba(205, 0, 0, 0.3);
+}
