@@ -41,20 +41,7 @@ export default function App() {
   const handleAnswer: MouseEventHandler<HTMLParagraphElement> = (event) => {
     const questionId = parseInt(event.currentTarget.dataset.questionId!);
     const option = event.currentTarget.dataset.option!;
-
-    // Create a new object with the updated userselectedanswer attribute
-    const updatedQuestion = {
-      ...questions.find((q) => q.id === questionId)!,
-      userSelectedAnswer: option
-    };
-
-    // Create a new array with the updated question object
-    const updatedQuestions = questions.map((q) =>
-      q.id === questionId ? updatedQuestion : q
-    );
-
-    // Update the state with the new array of questions
-    setQuestions(updatedQuestions);
+    setQuestions(questions.map(q => q.id === questionId ? { ...q, userSelectedAnswer: option } : q));
   };
 
   const handleSubmit = () => {
