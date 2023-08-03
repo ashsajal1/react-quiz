@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MouseEventHandler } from 'react';
+import { Link } from "react-router-dom";
 
 type Question = {
   id: Number,
@@ -79,21 +80,24 @@ export default function App() {
 
   if (doShowAnswers) {
     return (<>
-      <section>
+      <div>
         <h2>You scored {score} out of {questions.length}!</h2>
 
-        {questions.map((question, index) => (
-          <div key={index} className={`question ${question.answer === question.userSelectedAnswer ? "correct-answer" : 'incorrect-answer'}`}>
-            <h1>{question.question}</h1>
-            {question.options.map((option, index) => (
-              <p key={index}
-                className={`option ${question?.userSelectedAnswer === option && question.answer !== question.userSelectedAnswer ? 'wrong' : ''} ${question.answer === option ? 'correct' : ''}`}> {option} </p>
-            ))}
+        <section className="question-section">
 
-          </div>
-        ))}
+          {questions.map((question, index) => (
+            <div key={index} className={`question ${question.answer === question.userSelectedAnswer ? "correct-answer" : 'incorrect-answer'}`}>
+              <h1>{question.question}</h1>
+              {question.options.map((option, index) => (
+                <p key={index}
+                  className={`option ${question?.userSelectedAnswer === option && question.answer !== question.userSelectedAnswer ? 'wrong' : ''} ${question.answer === option ? 'correct' : ''}`}> {option} </p>
+              ))}
 
-      </section>
+            </div>
+          ))}
+
+        </section>
+      </div>
     </>)
   }
 
@@ -110,24 +114,28 @@ export default function App() {
 
   return (
     <>
-      <section className="question-section">
-        {questions.map((question, index) => (
-          <div className="question question-bg" key={index}>
-            <h1>{question.question}</h1>
-            {question.options.map((option, index) => (
-              <p key={index}
-                data-question-id={question.id}
-                data-option={option}
-                onClick={handleAnswer}
-                className={`option ${question?.userSelectedAnswer === option ? 'selected' : ''}`}> {option} </p>
-            ))}
+      <div>
+        <h1 className="headline">React Quiz App</h1>
+        <p className="credit">Developed by <a target="_blink" href='https://github.com/ashsajal1/react-quiz'>Ashfiquzzaman Sajal</a></p>
+        <section className="question-section">
+          {questions.map((question, index) => (
+            <div className="question question-bg" key={index}>
+              <h1>{question.question}</h1>
+              {question.options.map((option, index) => (
+                <p key={index}
+                  data-question-id={question.id}
+                  data-option={option}
+                  onClick={handleAnswer}
+                  className={`option ${question?.userSelectedAnswer === option ? 'selected' : ''}`}> {option} </p>
+              ))}
 
-          </div>
-        ))}
-
-        <button onClick={handleSubmit}>Submit Quiz</button>
-      </section>
-
+            </div>
+          ))}
+        </section>
+        <div className="btn-div">
+          <button className="submit-btn" onClick={handleSubmit}>Submit Quiz</button>
+        </div>
+      </div>
     </>
   )
 }

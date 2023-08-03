@@ -11,7 +11,7 @@
 .option,
 button {
     border-radius: 10px;
-    padding: 6px;
+    padding: 8px;
     color: #000;
     box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
     background-color: #fff;
@@ -22,6 +22,21 @@ button {
     margin-top: 6px;
     background-color: rgb(0, 57, 148);
     color: white;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.btn-div {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 12px;
+}
+
+.submit-btn {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .selected {
@@ -46,6 +61,14 @@ button {
     background-color:rgba(205, 0, 0, 0.3);
 }
 
+.headline, .credit {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.credit a {
+    text-decoration: none;
+    color: rgb(0, 57, 148);
+}
 @media screen and (min-width : 676px) {
     .question-section {
         display: grid;
