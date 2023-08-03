@@ -26,17 +26,9 @@ button {
     font-weight: bold;
 }
 
-.btn-div {
-    width: 100%;
-    display: grid;
-    place-items: center;
-    margin-top: 12px;
-}
-
 .submit-btn {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-top: 10px;
 }
 
 .selected {
@@ -74,5 +66,18 @@ button {
         display: grid;
         grid-template-columns: auto auto;
         grid-gap: 6px;
+    }
+
+    .btn-div {
+        width: 100%;
+        display: grid;
+        place-items: center;
+        margin-top: 12px;
+    }
+    
+    .submit-btn {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

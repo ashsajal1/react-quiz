@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { MouseEventHandler } from 'react';
-import { Link } from "react-router-dom";
 
 type Question = {
   id: Number,
