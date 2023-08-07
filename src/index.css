@@ -1,5 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .question {
-    padding: 6px 12px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-top: 6px;
+}
+
+.question-section {
+    padding: 12px 20px;
     border-radius: 10px;
     margin-top: 6px;
 }
@@ -15,6 +27,7 @@ button {
     color: #000;
     box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.3);
     background-color: #fff;
+    margin-top: 6px;
 }
 
 button {
@@ -24,9 +37,14 @@ button {
     color: white;
     padding: 12px;
     font-weight: bold;
+    transition: all 0.2s ease-in-out;
 }
 
-.submit-btn {
+button:hover {
+    background-color: rgba(0, 57, 148, .9);
+}
+
+.btn {
     width: 100%;
     margin-top: 10px;
 }
@@ -50,10 +68,11 @@ button {
 
 
 .incorrect-answer {
-    background-color:rgba(205, 0, 0, 0.3);
+    background-color: rgba(205, 0, 0, 0.3);
 }
 
-.headline, .credit {
+.headline,
+.credit {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -61,11 +80,77 @@ button {
     text-decoration: none;
     color: rgb(0, 57, 148);
 }
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    background-color: rgb(0, 57, 148);
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.single-question {
+    padding: 12px 20px;
+}
+
+.mulitple-btn-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.multiple-btn-div .mulitple-div-btn {
+    width: 90%;
+}
+
+/* Not Found page design */
+
+.not-found-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.not-found-heading {
+    font-size: 120px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.not-found-text {
+    font-size: 24px;
+    color: #666;
+}
+
+.not-found-btn a {
+    color:white;
+    text-decoration: none;
+}
+
+/* Show answer */
+.showScore {
+    padding: 12px;
+    display: grid;
+    place-items: center;
+}
+
 @media screen and (min-width : 676px) {
     .question-section {
         display: grid;
         grid-template-columns: auto auto;
         grid-gap: 6px;
+    }
+
+    .single-question {
+        width: 50%;
+        margin: auto;
     }
 
     .btn-div {
@@ -74,9 +159,9 @@ button {
         place-items: center;
         margin-top: 12px;
     }
-    
-    .submit-btn {
-        width: 50%;
+
+    .btn {
+        width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
