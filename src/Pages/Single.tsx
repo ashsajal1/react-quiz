@@ -4,11 +4,11 @@ import ShowAnswer from "../components/ShowAnswer";
 import ShowScore from "../components/ShowScore";
 
 type Question = {
-  id: Number,
-  question: String,
-  options: String[],
-  answer: String,
-  userSelectedAnswer?: String
+  id: number,
+  question: string,
+  options: string[],
+  answer: string,
+  userSelectedAnswer?: string
 }
 
 export default function Single() {
